@@ -6,7 +6,7 @@ $correo = $_POST["correo"];
 $contrasena = $_POST["contrasena"];
 
 
-$query = "SELECT * FROM usuario WHERE correo = '$correo'AND contrasena = ''$contrasena";
+$query = "SELECT * FROM usuario WHERE correo = $correo AND contrasena = $contrasena";
 $resultado = mysqli_query($conexion, $query);
 
 
