@@ -1,0 +1,15 @@
+<?php
+include 'conexion.php';
+
+$estado = $_POST['estado'];
+$id_queja = $_POST['id_queja'];
+
+//UPDATE quejas SET estado ="COMPLETADO" WHERE id_queja = 2;
+
+$query = "UPDATE quejas SET estado = $estado WHERE = $id_queja"; 
+
+mysqli_query($conexion, $query) or die (mysqli_error($conexion));
+mysqli_close($conexion);
+
+
+?>
