@@ -1,4 +1,5 @@
 <?php 
+//include 'conexion.php'
 $conexion = mysqli_connect("localhost", "root","","controlquejas");
 
 $correo="undefined";
@@ -17,10 +18,12 @@ $query = "SELECT * FROM usuario WHERE correo = '$correo' AND contrasena = '$cont
 $resultado = mysqli_query($conexion, $query);
 
 if($resultado -> num_rows > 0) {
-    echo "Ingreso exitoso";
+    echo "exitoso"; 
 }
 else {
-    echo "Ingreso fallido";
+    echo "fallido";
 }
+
+
 ?>
 
