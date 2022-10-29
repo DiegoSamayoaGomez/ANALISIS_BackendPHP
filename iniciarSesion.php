@@ -1,14 +1,20 @@
-<?php
+<?php 
+$conexion = mysqli_connect("localhost", "root","","controlquejas");
 
-include 'conexion.php';
+$correo="undefined";
+$contrasena="undefined";
 
-$correo = $_POST["correo"];
-$contrasena = $_POST["contrasena"];
+if (isset($_POST["correo"])){
+    $correo = $_POST["correo"]; 
+}
+
+if (isset($_POST["contrasena"])){
+    $contrasena = $_POST["contrasena"];
+}
 
 
-$query = "SELECT * FROM usuario WHERE correo = $correo AND contrasena = $contrasena";
+$query = "SELECT * FROM usuario WHERE correo = '$correo' AND contrasena = '$contrasena'";
 $resultado = mysqli_query($conexion, $query);
-
 
 if($resultado -> num_rows > 0) {
     echo "Ingreso exitoso";
@@ -16,5 +22,5 @@ if($resultado -> num_rows > 0) {
 else {
     echo "Ingreso fallido";
 }
-
 ?>
+
