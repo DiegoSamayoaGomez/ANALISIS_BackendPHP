@@ -2,7 +2,7 @@
 
 include 'conexion.php';
 
-$query = "SELECT descripcion, imagen, estado, fecha, id_categoria, id_usuario FROM quejas ORDER BY fecha ASC";
+$query = "SELECT descripcion, imagen, estado, fecha, id_categoria, id_usuario FROM quejas ORDER BY fecha DESC";
 //$query = "SELECT * FROM quejas ORDER BY fecha ASC";
 //SELECT `id_queja`, `descripcion`, `imagen`, `estado`, `fecha`, `id_categoria`, `id_usuario` FROM `quejas` WHERE 1
 
