@@ -1,6 +1,12 @@
 <?php
 //include 'conexion.php'
-$conexion = mysqli_connect("localhost", "root","","controlquejas");
+//$conexion = mysqli_connect("localhost", "root","","controlquejas");
+
+$conexion = mysqli_connect("bnltxzejf6qnxll0xjii-mysql.services.clever-cloud.com",
+ "u9vvluuiobf0rl09",
+ "sn3cwuhPNa27LMV1Sbeh",
+ "bnltxzejf6qnxll0xjii");
+
 //Codigo
 $descripcion = $_POST["descripcion"];
 $imagen = $_POST["imagen"];
