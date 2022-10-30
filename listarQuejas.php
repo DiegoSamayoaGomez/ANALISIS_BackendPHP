@@ -1,13 +1,13 @@
 <?php
-//SELECT * FROM quejas WHERE estado = "EN PROCESO" ORDER BY fecha DESC;
 
 include 'conexion.php';
-$estado = $_GET['estado'];
-//$fecha = $_GET['fecha'];
 
-$query = "SELECT * FROM quejas WHERE estado = '$estado' ORDER BY fecha ASC";
-//$query = "SELECT * FROM quejas WHERE estado = '$estado'";
-//$query = "SELECT * FROM quejas WHERE estado = '$estado'";
+$query = "SELECT descripcion, imagen, estado, fecha, id_categoria, id_usuario FROM quejas ORDER BY fecha ASC";
+//$query = "SELECT * FROM quejas ORDER BY fecha ASC";
+//SELECT `id_queja`, `descripcion`, `imagen`, `estado`, `fecha`, `id_categoria`, `id_usuario` FROM `quejas` WHERE 1
+
+
+
 $resultado = $conexion -> query($query);
 
 while($fila=$resultado ->fetch_array()){
@@ -16,6 +16,5 @@ while($fila=$resultado ->fetch_array()){
 
 echo json_encode($listado);
 $resultado -> close();
-
 
 ?>
